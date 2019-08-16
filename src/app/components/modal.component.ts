@@ -1,5 +1,5 @@
 import { ModalRef } from '@momentum-ui/angular';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -44,12 +44,15 @@ import { Component } from '@angular/core';
     </md-modal>
   `
 })
-export class AppModalComponent {
+export class AppModalComponent implements OnInit {
   sampleData;
   submitted = false;
   constructor(private modalRef: ModalRef) {
-    this.sampleData = this.modalRef.data;
 
+  }
+
+  ngOnInit() {
+    this.sampleData = this.modalRef.data;
   }
 
   public close() {

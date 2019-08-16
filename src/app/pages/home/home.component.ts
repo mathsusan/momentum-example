@@ -8,23 +8,22 @@ import { AppModalComponent } from 'src/app/components/modal.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  dataModel = 'Test';
   constructor(private modal: ModalService) { }
 
   ngOnInit() {
   }
 
+  testString = 'test';
+
   openModal() {
     const modalRef = this.modal.open({
       content: AppModalComponent,
-      data: {
-        value: this.dataModel
-      },
+      data: {value: this.testString},
       backdrop: true
     });
     modalRef.onHide$.subscribe( ex => {
-      this.dataModel = ex.data.value;
-     console.log(this.dataModel);
+     this.testString = ex.data.value;
+     console.log(this.testString);
     });
   }
 
