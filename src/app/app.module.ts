@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { AppModalComponent } from './components/modal.component';
 import { ModalService } from '@momentum-ui/angular';
-import { Overlay, OverlayPositionBuilder,  ScrollStrategyOptions } from '@angular/cdk/overlay';
+import { Overlay } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { Overlay, OverlayPositionBuilder,  ScrollStrategyOptions } from '@angula
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ModalService, Overlay,  OverlayPositionBuilder,  ScrollStrategyOptions ],
+  providers: [ModalService, Overlay ],
   entryComponents: [AppModalComponent],
   bootstrap: [AppComponent]
 })
