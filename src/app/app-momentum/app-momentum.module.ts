@@ -13,8 +13,13 @@ import {
   ListModule,
   ListItemModule,
   TopbarModule,
-  ModalModule
+  ModalModule,
+  DrawerModule,
+  BadgeModule,
+  PopoverModule,
+  TooltipModule
 } from '@momentum-ui/angular';
+
 
 @NgModule({
   declarations: [],
@@ -32,7 +37,11 @@ import {
     ListItemModule,
     TopbarModule,
     ModalModule,
-    InputModule
+    InputModule,
+    DrawerModule,
+    BadgeModule,
+    PopoverModule,
+    TooltipModule
   ],
   exports: [
     SideBarModule,
@@ -47,7 +56,11 @@ import {
     ListItemModule,
     TopbarModule,
     ModalModule,
-    InputModule
+    InputModule,
+    DrawerModule,
+    BadgeModule,
+    PopoverModule,
+    TooltipModule
   ]
 })
 export class AppMomentumModule { }

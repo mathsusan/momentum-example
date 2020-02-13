@@ -8,12 +8,22 @@ import { AppModalComponent } from 'src/app/components/modal.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  public showMe = false;
+  testString = 'test';
   constructor(private modal: ModalService) { }
 
   ngOnInit() {
   }
 
-  testString = 'test';
+
+  public showDrawer() {
+    this.showMe = true;
+  }
+
+  changeDrawer(isOpen) {
+    this.showMe = isOpen;
+  }
 
   openModal() {
     const modalRef = this.modal.open({

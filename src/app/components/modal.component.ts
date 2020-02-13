@@ -1,5 +1,6 @@
 import { ModalRef } from '@momentum-ui/angular';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 
 @Component({
@@ -13,15 +14,32 @@ import { Component, OnInit } from '@angular/core';
         headerLabel="Default Modal">
       </md-modal-header>
       <md-modal-body>
-        <form #form="ngForm" (ngSubmit)="save(form.value)" >
-        <md-input
-        [(ngModel)]="this.sampleData.value"
-        inputSize="small-5"
-        label="Enter hex color value"
-        name="name"
-      >
-      </md-input>
-        </form>
+        <p>This is a modal</p>
+        <form [formGroup]="inputForm">
+        <md-input-container
+          inputSize="small-5"
+          label="Default Input"
+        >
+          <input
+            mdInput
+            formControlName="inputControl"
+            id="example-default-input"
+          />
+        </md-input-container>
+      </form>
+      form value: {{ inputForm.value.inputControl }}
+
+      <div *ngIf="inputForm.controls['inputControl'].hasError('minlength')">
+        Need Min Length of 10
+      </div>
+
+      <div *ngIf="inputForm.controls['inputControl'].hasError('maxlength')">
+        Max Length should be 14
+      </div>
+
+      <div *ngIf="inputForm.controls['inputControl'].hasError('customValid')">
+        Custom Validator: Doesn't start with 'custom'
+      </div>
       </md-modal-body>
       <md-modal-footer>
         <button md-button
@@ -36,7 +54,7 @@ import { Component, OnInit } from '@angular/core';
           alt="Submit Form"
           type="submit"
           aria-label="Submit Form"
-          (click)="form.ngSubmit.emit()"
+          (click)="close()"
         >
           OK
         </button>
@@ -46,9 +64,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppModalComponent implements OnInit {
   sampleData;
+  inputForm;
   submitted = false;
-  constructor(private modalRef: ModalRef) {
+  constructor(private modalRef: ModalRef, private fb: FormBuilder) {
 
+    this.inputForm = this.fb.group({
+      inputControl: ['', Validators.compose(
+        [ Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(14),
+          ValidateCustom
+        ]),
+      ]
+    });
   }
 
   ngOnInit() {
@@ -56,15 +84,15 @@ export class AppModalComponent implements OnInit {
   }
 
   public close() {
-    if (this.submitted) {
-      this.modalRef.data = this.sampleData;
-    }
+
     this.modalRef.close(this.sampleData);
   }
 
-  public save() {
-    this.submitted = true;
-    this.close();
-  }
+}
 
+function ValidateCustom(control: AbstractControl) {
+  if (!control.value.startsWith('custom')) {
+    return { customValid: true };
+  }
+  return null;
 }
