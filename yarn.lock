@@ -323,6 +323,7 @@
   resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.21.0.tgz#151e6c8db60f67abb2fd23d93479c1b3faa672e2"
   integrity sha512-yTNBQsT2qnuP2FXKqU9VwEWOg0p+Q9qxZrGCdy6Y44FpCmzYaKxg009EwX6BBvclInUvgPEbRyE2+xZy/iyjYQ==
 
+
 "@momentum-ui/utils@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@momentum-ui/utils/-/utils-6.0.4.tgz#f60c216ad9d0c7b5cf922a9c2195c5988589f563"
