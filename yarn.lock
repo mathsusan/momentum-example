@@ -323,7 +323,6 @@
   resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.21.0.tgz#151e6c8db60f67abb2fd23d93479c1b3faa672e2"
   integrity sha512-yTNBQsT2qnuP2FXKqU9VwEWOg0p+Q9qxZrGCdy6Y44FpCmzYaKxg009EwX6BBvclInUvgPEbRyE2+xZy/iyjYQ==
 
-
 "@momentum-ui/utils@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@momentum-ui/utils/-/utils-6.0.4.tgz#f60c216ad9d0c7b5cf922a9c2195c5988589f563"
@@ -4112,10 +4111,10 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.11:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+lodash-es@^4.17.14:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.14.tgz#12a95a963cc5955683cee3b74e85458954f37ecc"
+  integrity sha512-7zchRrGa8UZXjD/4ivUWP1867jDkhzTG2c/uj739utSd7O/pFFdxspCemIFKEEjErbcqRzn8nKnGsi7mvTgRPA==
 
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
