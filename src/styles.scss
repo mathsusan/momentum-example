@@ -1,1 +1,7 @@
 @import "node_modules/@momentum-ui/core/scss/momentum-ui.scss";
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+
+.md-top-bar--fixed {
+  z-index: 999;
+}

@@ -1,6 +1,23 @@
+<!-- <button
+md-button
+aria-label="openDrawer"
+(click)="showDrawer()">
+  Open Drawer
+</button>
+<md-drawer
+[(isOpen)]="showMe"
+(drawerChanged)="changeDrawer($event)"
+> -->
 <p>
-  home works!
+  <button md-button aria-label="myAriaLabel" (click)="openModal(dataModel)">
+    Test Me
+  </button>
 </p>
+<md-badge color="blue" [mdPopover]="tootltipTemplate">Popover from template</md-badge>
+<ng-template #tootltipTemplate>
+    <md-badge color="red">HOWDY</md-badge>
+    <div class="box">THis is cool</div>
+</ng-template>
 <button md-button aria-label="myAriaLabel" mdTooltip="Hello World!" (click)="onClick()">
   Test Me
 </button>
