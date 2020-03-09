@@ -301,20 +301,20 @@
   dependencies:
     base64-js "^1.3.0"
 
-"@momentum-ui/angular@^10.6.0":
-  version "10.6.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/angular/-/angular-10.6.0.tgz#b84eb88dcdbdc10b7dbe75b8e2afa4d6b7203f04"
-  integrity sha512-1FwqXDNJ1BhVfcIcu6XfNDCM89lPNX3c9zyKsC+sD7rk0Tg3ftLlwX1J3agWeKVUwePNcYtpuy5YqXULXqM25g==
+"@momentum-ui/angular@^11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/angular/-/angular-11.2.0.tgz#019fc3e73b87c61ef7f598baf53f92817bb7874b"
+  integrity sha512-HlcT1PzkBb6RZYNLDHvb+kHxyspYm3NXmyAH1mzfsP7LhXkHXUH1vLO8hGs0LBxBqz0+cKJTH8hY2Qy60hDyfg==
   dependencies:
-    "@momentum-ui/core" "^19.2.4"
-    "@momentum-ui/icons" "^7.21.0"
+    "@momentum-ui/core" "^19.4.0"
+    "@momentum-ui/icons" "^7.22.0"
     "@momentum-ui/utils" "6.0.4"
     tslib "^1.9.0"
 
-"@momentum-ui/core@^19.2.4":
-  version "19.2.4"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/core/-/core-19.2.4.tgz#c90e97609a8bde1bfc1d0ab03ee51a38586ac791"
-  integrity sha512-B55lRk9t5xUYBq3UuNgdXobknKa8IkEfRMnw43xZBjij6Z6vrW3GHtl82aAc9zr04ggXrTBJWgXILmn7g2oNjA==
+"@momentum-ui/core@^19.4.0":
+  version "19.4.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/core/-/core-19.4.0.tgz#e36e59fdfda48b83dee22782e426cd2e4faf03cd"
+  integrity sha512-K7AVgnDzc6h+6CfOPgs7lM1iZtFnL7whTVpes7Fm8yngyeN+Bq0iI3tko0HlOa9gvP2TKCwmH/10evAZeIpWvg==
   dependencies:
     "@momentum-ui/icons" "^7.21.0"
 
@@ -322,6 +322,11 @@
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.21.0.tgz#151e6c8db60f67abb2fd23d93479c1b3faa672e2"
   integrity sha512-yTNBQsT2qnuP2FXKqU9VwEWOg0p+Q9qxZrGCdy6Y44FpCmzYaKxg009EwX6BBvclInUvgPEbRyE2+xZy/iyjYQ==
+
+"@momentum-ui/icons@^7.22.0":
+  version "7.22.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.22.0.tgz#f6016688ea644adb114679553689ddeb9833ca30"
+  integrity sha512-cSMG4dwUWvnJUaLIbYEcrng9s+tT6DEIIEfzNRZjXHMfb7HJpf1Tgua25vvJ7dbuohahUedGDGTqfHURgrMezw==
 
 "@momentum-ui/utils@6.0.4":
   version "6.0.4"
