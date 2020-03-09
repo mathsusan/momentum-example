@@ -7,9 +7,9 @@ import { AppComponent } from './app.component';
 import { AppMomentumModule } from './app-momentum/app-momentum.module';
 import { HomeComponent } from './pages/home/home.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
-import { AppModalComponent } from './components/modal.component';
 import { ModalService } from '@momentum-ui/angular';
 import { Overlay } from '@angular/cdk/overlay';
+import { TestModalComponent } from './components/test-modal/test-modal.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { Overlay } from '@angular/cdk/overlay';
     AppComponent,
     HomeComponent,
     UsersPageComponent,
-    AppModalComponent
+    TestModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,7 @@ import { Overlay } from '@angular/cdk/overlay';
     ReactiveFormsModule
   ],
   providers: [ModalService, Overlay ],
-  entryComponents: [AppModalComponent],
+  entryComponents: [TestModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

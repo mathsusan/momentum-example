@@ -2,6 +2,12 @@
 @import '~@angular/cdk/overlay-prebuilt.css';
 
 
-.md-top-bar--fixed {
-  z-index: 999;
+body {
+  position: relative;
 }
+
+.page {
+  display: grid;
+}
+
+

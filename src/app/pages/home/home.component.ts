@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '@momentum-ui/angular';
-import { AppModalComponent } from 'src/app/components/modal.component';
+import { TestModalComponent } from 'src/app/components/test-modal/test-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   openModal() {
     const modalRef = this.modal.open({
-      content: AppModalComponent,
+      content: TestModalComponent,
       data: {value: this.testString},
       backdrop: true
     });

@@ -1,28 +1,4 @@
-<header md-top-bar color="light" [fixed]="true">
-  <ng-container
-    *ngTemplateOutlet="brand"
-    ngProjectAs="brand"
-  ></ng-container>
-  <md-top-bar-nav>
-    <ng-container *ngTemplateOutlet="list"></ng-container>
-  </md-top-bar-nav>
-  <md-top-bar-right>
-    <div class="md-top-bar__user"></div>
-    <div class="md-top-bar__logged-out">
-      <a href="javascript:void(0)">Log In</a>
-      <button md-button color="blue" aria-label="myAriaLabel">
-        Button
-      </button>
-    </div>
-  </md-top-bar-right>
-  <md-top-bar-mobile [shouldCloseOnClick]="false">
-    <ng-container
-      *ngTemplateOutlet="brand"
-      ngProjectAs="brand"
-    ></ng-container>
-    <ng-container *ngTemplateOutlet="list"></ng-container>
-  </md-top-bar-mobile>
-</header>
+
 
 <ng-template #brand>
   <a
@@ -34,9 +10,9 @@
 </ng-template>
 
 <div class="page">
-<!-- side bar -->
+    <!-- side bar -->
     <md-sidebar [withToggle]="true">
-      <md-sidebar-header [ngStyle]="{'padding': '1rem 3rem 0 0rem'}">
+      <md-sidebar-header [ngStyle]="{'padding': '1rem 3rem'}">
         <img src="../assets/CompanyLogo.png"/>
       </md-sidebar-header>
       <md-sidebar-body>
@@ -64,6 +40,6 @@
       </md-sidebar-footer>
     </md-sidebar>
     <div class="page-area">
-    <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
     </div>
 </div>
