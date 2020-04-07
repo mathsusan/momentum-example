@@ -12,7 +12,7 @@ import { Overlay } from '@angular/cdk/overlay';
 import { TestModalComponent } from './components/test-modal/test-modal.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
-import { CounterComponent } from './components/test-modal/counter/counter.component';
+import { ModalStepsComponent } from './components/modal-steps/modal-steps.component';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { CounterComponent } from './components/test-modal/counter/counter.compon
     HomeComponent,
     UsersPageComponent,
     TestModalComponent,
-    CounterComponent
+    ModalStepsComponent
   ],
   imports: [
     BrowserModule,

@@ -7,11 +7,9 @@ import {
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 
-import * as fromCounter from '../counter.reducer';
+import * as fromCounter from '../components/modal-steps/state/counter.reducer';
 
 export interface AppState {
-  /* Omitting the space in front of the colon outsmarts my markdown processor,
-     sorry ... */
   [fromCounter.counterFeatureKey]: fromCounter.State;
 }
 
@@ -38,10 +36,12 @@ export const selectCounterState = createFeatureSelector<AppState, fromCounter.St
     fromCounter.counterFeatureKey
 );
 
+
 export const selectCounterCurrent = createSelector(
   getCounter,
   (state: fromCounter.State) => state.current
-)
+);
+
 
 export const metaReducers: MetaReducer<AppState>[] = !environment.production
   ? [logger]

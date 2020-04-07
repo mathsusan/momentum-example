@@ -3,17 +3,23 @@ import { on, createReducer } from '@ngrx/store';
 
 export const counterFeatureKey = 'counter';
 
+export const MAX_STEP = 2;
+
 export interface State {
   current: number;
 }
 
 export const initialState: State = {
-  current: 0
+  current: 0,
 };
 
 export const reducer = createReducer(
   initialState,
-  on(CounterActions.increment, (state) => ({ current: state.current + 1})),
-  on(CounterActions.decrement, (state) => ({ current: state.current - 1})),
+  on(CounterActions.increment, (state) => (
+    { current: state.current + 1}
+  )),
+  on(CounterActions.decrement, (state) => (
+    { current: state.current - 1}
+    )),
   on(CounterActions.reset, () => initialState),
 );
