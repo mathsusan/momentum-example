@@ -301,32 +301,27 @@
   dependencies:
     base64-js "^1.3.0"
 
-"@momentum-ui/angular@^11.2.0":
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/angular/-/angular-11.2.0.tgz#019fc3e73b87c61ef7f598baf53f92817bb7874b"
-  integrity sha512-HlcT1PzkBb6RZYNLDHvb+kHxyspYm3NXmyAH1mzfsP7LhXkHXUH1vLO8hGs0LBxBqz0+cKJTH8hY2Qy60hDyfg==
+"@momentum-ui/angular@^11.6.0":
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/angular/-/angular-11.6.0.tgz#0f3f7873fc5d514c8c10969fedec6ffb1b8defef"
+  integrity sha512-5Wdj2E6FtHxU/EpkYZaDjJHXVjfapwHBaworhtfWoWkZntR2LoOv169wEJ9FAyKCRRNXDqaoF7eiiLihsecr+A==
   dependencies:
-    "@momentum-ui/core" "^19.4.0"
-    "@momentum-ui/icons" "^7.22.0"
+    "@momentum-ui/core" "^19.4.9"
+    "@momentum-ui/icons" "^7.25.0"
     "@momentum-ui/utils" "6.0.4"
     tslib "^1.9.0"
 
-"@momentum-ui/core@^19.4.0":
-  version "19.4.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/core/-/core-19.4.0.tgz#e36e59fdfda48b83dee22782e426cd2e4faf03cd"
-  integrity sha512-K7AVgnDzc6h+6CfOPgs7lM1iZtFnL7whTVpes7Fm8yngyeN+Bq0iI3tko0HlOa9gvP2TKCwmH/10evAZeIpWvg==
+"@momentum-ui/core@^19.4.9":
+  version "19.4.9"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/core/-/core-19.4.9.tgz#ee9e96154d43a33162c95f41bd1b8b52d6e00baf"
+  integrity sha512-X+raE5z/ECPot6NZ3xB/FHprKUewFk2Q2UUKMONxGFJ6ljRlXk390WyGxJ9l5behnxiOBtWiCBW0U+GnN0VITw==
   dependencies:
-    "@momentum-ui/icons" "^7.21.0"
+    "@momentum-ui/icons" "^7.25.0"
 
-"@momentum-ui/icons@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.21.0.tgz#151e6c8db60f67abb2fd23d93479c1b3faa672e2"
-  integrity sha512-yTNBQsT2qnuP2FXKqU9VwEWOg0p+Q9qxZrGCdy6Y44FpCmzYaKxg009EwX6BBvclInUvgPEbRyE2+xZy/iyjYQ==
-
-"@momentum-ui/icons@^7.22.0":
-  version "7.22.0"
-  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.22.0.tgz#f6016688ea644adb114679553689ddeb9833ca30"
-  integrity sha512-cSMG4dwUWvnJUaLIbYEcrng9s+tT6DEIIEfzNRZjXHMfb7HJpf1Tgua25vvJ7dbuohahUedGDGTqfHURgrMezw==
+"@momentum-ui/icons@^7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@momentum-ui/icons/-/icons-7.25.0.tgz#c0a221c2887ef2f114fb1628cbafa3e1f42bb229"
+  integrity sha512-+Bmut5TUw29uOZm3K9Q9TIv2VvwEX/+7c6E4Lrejsd6Alub7Jsvqrp63Rm61S/yOe+wqVYRUqeQJBqVg7n8S4g==
 
 "@momentum-ui/utils@6.0.4":
   version "6.0.4"
