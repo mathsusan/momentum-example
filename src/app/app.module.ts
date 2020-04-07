@@ -10,6 +10,9 @@ import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { ModalService } from '@momentum-ui/angular';
 import { Overlay } from '@angular/cdk/overlay';
 import { TestModalComponent } from './components/test-modal/test-modal.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { ModalStepsComponent } from './components/modal-steps/modal-steps.component';
 
 
 @NgModule({
@@ -17,14 +20,22 @@ import { TestModalComponent } from './components/test-modal/test-modal.component
     AppComponent,
     HomeComponent,
     UsersPageComponent,
-    TestModalComponent
+    TestModalComponent,
+    ModalStepsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AppMomentumModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
   ],
   providers: [ModalService, Overlay ],
   entryComponents: [TestModalComponent],
