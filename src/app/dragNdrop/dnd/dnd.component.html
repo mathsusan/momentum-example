@@ -1,0 +1,24 @@
+<div *ngIf="!fileuploaded" class="common-bulk-create-card" appDnd (fileDropped)="onFileDropped($event)">
+  <div class="common-bulk-create-content">
+    <label class="upload-label" for="fileDropRef">
+      <i class="icon icon-upload_32"></i>
+      <p class="upload-icon-text md-margin__bottom--xxxl">Import CSV File</p>
+    </label>
+    <input type="file" #fileDropRef id="fileDropRef"  (change)="fileBrowseHandler($event.target.files[0])" accept="*.csv" />
+    <span>Drag and drop your CSV file here or <label class="upload-label a" for="fileDropRef">click to browse</label>
+    </span>
+  </div>
+</div>
+<div *ngIf="fileuploaded" class="common-bulk-create-card">
+  <div class="common-bulk-create-content">
+    <div class="md-margin__bottom--l">
+      <p>File Ready for import</p>
+      <p>{{ file.name }}</p>
+    </div>
+    <div>
+      <button class="md-button--none md-link md-link--blue bulk-button" (click)="deleteFile()">
+        Remove file
+      </button>
+    </div>
+  </div>
+</div>

@@ -17,7 +17,8 @@ import {
   DrawerModule,
   BadgeModule,
   PopoverModule,
-  TooltipModule
+  TooltipModule,
+  SpinnerModule
 } from '@momentum-ui/angular';
 
 
@@ -41,7 +42,8 @@ import {
     DrawerModule,
     BadgeModule,
     PopoverModule,
-    TooltipModule
+    TooltipModule,
+    SpinnerModule
   ],
   exports: [
     SideBarModule,
@@ -60,7 +62,8 @@ import {
     DrawerModule,
     BadgeModule,
     PopoverModule,
-    TooltipModule
+    TooltipModule,
+    SpinnerModule
   ]
 })
 export class AppMomentumModule { }

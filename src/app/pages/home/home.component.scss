@@ -1,5 +1,43 @@
-div, p {
+.home {
   margin: 2rem;
+  width: 800px;
+  p {
+    margin: 2rem;
+  }
+}
+.example {
+  margin: 2rem;
+}
+
+.search-input {
+  &.before {
+    width: auto;
+    input {
+      width: 1%;
+      padding-left: 0;
+    }
+  }
+  .md-input__after{
+    z-index: -1;
+  }
+
+}
+
+.md-search-filter {
+  display: flex;
+  flex-direction: row;
+  button {
+    background-color: #ffffff;
+    border-color: #d2d5d6;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    width: 2.75rem;
+    height: 36px;
+    border: 0.0625rem solid;
+    border-radius: 4px;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '@momentum-ui/angular';
-import { TestModalComponent } from 'src/app/components/test-modal/test-modal.component';
+import { TestModalComponent } from '../../test-modal/test-modal/test-modal.component'
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,8 @@ import { TestModalComponent } from 'src/app/components/test-modal/test-modal.com
 export class HomeComponent implements OnInit {
 
   public showMe = false;
+  public expand = false;
+  public showClear = true;
   testString = 'test';
   constructor(private modal: ModalService) { }
 
@@ -35,6 +37,29 @@ export class HomeComponent implements OnInit {
      this.testString = ex.data.value;
      console.log(this.testString);
     });
+  }
+  public getShowClear() {
+    return this.showClear && document.getElementById('myInput');
+  }
+
+  public expandMe() {
+    this.expand = true;
+    this.showClear = true;
+    document.getElementById('myInput').focus();
+  }
+  public closeMe($event) {
+    if ( ($event.currentTarget.classList).contains('md-input--after') ) {
+      $event.stopPropagation();
+      this.clearMe();
+      return;
+    }
+    this.expand = false;
+    this.showClear = false;
+  }
+
+  public clearMe() {
+    document.getElementById('myInput').focus();
+    console.log('clear me');
   }
 
 }

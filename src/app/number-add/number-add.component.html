@@ -1,0 +1,66 @@
+<form
+(ngSubmit)="sendSubmit()"
+[formGroup]="addNumberForm"
+class="add-numbers-form md-margin__top--xl"
+>
+<div class="text-right">
+  <button
+    md-button
+    class="md-margin__bottom--s"
+    [attr.aria-label]="'Clear'"
+    circle="true"
+    [mdTooltip]="'Clear'"
+    [disabled]="isValidating && numbersToAdd.length < 0"
+  >
+    <i class="icon icon-delete_12"></i>
+  </button>
+</div>
+<div class="mobile-number__spinner-container  md-margin__bottom--l" *ngIf="isValidating">
+  <md-spinner size="36"></md-spinner>
+  <div>Validating numbers ...</div>
+</div>
+<md-input-container *ngIf="!isValidating">
+  <textarea
+    mdInput
+    formControlName="numberInput"
+    [placeholder]="textAreaPlaceholder"
+  >
+  </textarea>
+  <!-- <md-input-message
+    *ngIf="addNumberForm.controls['numberInput'].errors"
+  >
+    {{ getErrorMessage(addNumberForm.controls['numberInput'].errors) }}
+  </md-input-message> -->
+</md-input-container>
+<button
+  type="submit"
+  md-button
+  class="md-button--blue-outline pull-right"
+  [attr.aria-label]="'Validate'"
+  [disabled]="isValidating"
+>
+ Validate
+</button>
+</form>
+<div *ngIf="validNumbers.length > 0">
+  <div
+    class="md-margin__top--s md-margin__bottom--xs md-padding__left--s"
+    translate="broadCloud.numbers.validatedNumbers"
+  ></div>
+  <div class="md-margin__top--s md-margin__bottom--xs text-right">
+    <!-- TODO: SUMCKENZ add variable for the 1000 -->
+    <span>{{ validNumbers.length }}/1000</span>
+  </div>
+  <div class="mobile-number-list md-padding__left--s">
+    <md-badge *ngFor="let number of validNumbers" class="md-margin__right--s">
+      <span>{{ number }}</span>
+      <button
+        class="md-button md-button--none md-margin__left--s"
+        [attr.aria-label]="'delete'"
+        (click)="removeNumber(number)"
+      >
+        <i class="icon icon-cancel_12"></i>
+      </button>
+    </md-badge>
+  </div>
+</div>

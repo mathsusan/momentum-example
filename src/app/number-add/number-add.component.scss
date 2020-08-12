@@ -1,0 +1,15 @@
+@import "~@momentum-ui/core/scss/momentum-ui.scss";
+
+.add-numbers-form {
+  textarea,
+  .mobile-number__spinner-container {
+    height: 15.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+      font-weight: $font-weight-bold;
+    }
+  }
+}

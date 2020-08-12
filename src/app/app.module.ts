@@ -1,18 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppMomentumModule } from './app-momentum/app-momentum.module';
 import { HomeComponent } from './pages/home/home.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
-import { ModalService } from '@momentum-ui/angular';
-import { Overlay } from '@angular/cdk/overlay';
-import { TestModalComponent } from './components/test-modal/test-modal.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { ModalStepsComponent } from './components/modal-steps/modal-steps.component';
+import { TestModalModule } from './test-modal/test-modal.module';
+import { DndDirective } from './dragNdrop/dnd.directive';
+import { DndComponent } from './dragNdrop/dnd/dnd.component';
+import { NumberAddComponent } from './number-add/number-add.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -20,25 +21,19 @@ import { ModalStepsComponent } from './components/modal-steps/modal-steps.compon
     AppComponent,
     HomeComponent,
     UsersPageComponent,
-    TestModalComponent,
-    ModalStepsComponent
+    DndDirective,
+    DndComponent,
+    NumberAddComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppMomentumModule,
     FormsModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
+    AppMomentumModule,
+    TestModalModule
   ],
-  providers: [ModalService, Overlay ],
-  entryComponents: [TestModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

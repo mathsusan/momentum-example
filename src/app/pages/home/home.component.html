@@ -1,17 +1,24 @@
-<div>
-  <p>
-    <button md-button aria-label="myAriaLabel" (click)="openModal()">
-      Test the Modal
+<div class="home">
+  <div class="example">
+    <p>
+      <button md-button aria-label="myAriaLabel" (click)="openModal()">
+        Test the Modal
+      </button>
+    </p>
+    <md-badge color="blue" [mdPopover]="tootltipTemplate" popoverTrigger="MouseEnter">Popover from template</md-badge>
+    <ng-template #tootltipTemplate>
+        <md-badge color="red">HOWDY</md-badge>
+        <div class="box">THis is cool</div>
+    </ng-template>
+  </div>
+  <div class="example">
+    <button md-button aria-label="myAriaLabel" mdTooltip="Hello World!">
+      Test the tooltip
     </button>
-  </p>
-  <md-badge color="blue" [mdPopover]="tootltipTemplate" popoverTrigger="MouseEnter">Popover from template</md-badge>
-  <ng-template #tootltipTemplate>
-      <md-badge color="red">HOWDY</md-badge>
-      <div class="box">THis is cool</div>
-  </ng-template>
+  </div>
+  <app-dnd></app-dnd>
+
+
 </div>
-<div>
-  <button md-button aria-label="myAriaLabel" mdTooltip="Hello World!">
-    Test the tooltip
-  </button>
-</div>
+
+

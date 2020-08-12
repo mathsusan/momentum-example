@@ -1,0 +1,56 @@
+@import '@momentum-ui/core/scss/ng/settings/settings.scss';
+
+.common-bulk-create-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  color: $md-gray-100;
+}
+
+.common-bulk-create-card {
+  width: 49%;
+  background-color: $md-white;
+  border: 1px solid $md-gray-30;
+  height: 15rem;
+  &.fileover {
+    background-color: $md-blue-20;
+  }
+}
+
+.common-bulk-create-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: .875rem;
+  text-align: center;
+  justify-content: center;
+  button {
+    font-size: .875rem;;
+  }
+  input {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+  }
+  .upload-icon-text {
+    font-size: 1rem;
+  }
+  .upload-label {
+    cursor: pointer;
+    &:hover {
+      color: $md-blue-60;
+    }
+    &.a {
+      color:  $md-blue-60;
+      &:hover{
+        color: $md-blue-80;
+      }
+    }
+  }
+
+}
+
